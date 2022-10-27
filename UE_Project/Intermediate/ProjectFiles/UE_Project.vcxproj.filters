@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\UE_Project.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31777B5-4F33-42C5-8B04-1E1F6094F3C6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UE_Project.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\UE_ProjectEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{F24DA9C5-8DF7-42A6-AA0E-95FF32EA90A9}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\UE_Project">
+      <UniqueIdentifier>{D1A3A12F-DDF6-4C2D-9E05-F9F0DE09D076}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\UE_Project\UE_Project.Build.cs">
+      <Filter>Source\UE_Project</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\UE_Project\UE_Project.cpp">
+      <Filter>Source\UE_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_Project\UE_Project.h">
+      <Filter>Source\UE_Project</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UE_Project\UE_ProjectGameModeBase.cpp">
+      <Filter>Source\UE_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_Project\UE_ProjectGameModeBase.h">
+      <Filter>Source\UE_Project</Filter>
+    </ClInclude>
+    <Filter Include="Source\UE_Project\Player">
+      <UniqueIdentifier>{8AEB3E3E-A3B7-4E13-A6F8-EF6C7F5B641C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\UE_Project\Player\CPlayer.cpp">
+      <Filter>Source\UE_Project\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_Project\Player\CPlayer.h">
+      <Filter>Source\UE_Project\Player</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\UE_Project\Player\PlayerAnim.cpp">
+      <Filter>Source\UE_Project\Player</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_Project\Player\PlayerAnim.h">
+      <Filter>Source\UE_Project\Player</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
