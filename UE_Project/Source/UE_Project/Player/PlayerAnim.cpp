@@ -19,6 +19,5 @@ void UPlayerAnim::NativeUpdateAnimation(float DelatSeconds)
     Speed = Owner->GetVelocity().Size2D();
     Direction = CalculateDirection(Owner->GetVelocity(), Owner->GetControlRotation());
 
-    IIRifle* rifle = Cast<IIRifle>(Owner);
 
 }

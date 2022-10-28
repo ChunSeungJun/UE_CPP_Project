@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define UE_PROJECT_PlayerAnim_generated_h
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_SPARSE_DATA
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_RPC_WRAPPERS
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_INCLASS_NO_PURE_DECLS \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_SPARSE_DATA
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_RPC_WRAPPERS
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_RPC_WRAPPERS_NO_PURE_DECLS
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUPlayerAnim(); \
 	friend struct Z_Construct_UClass_UPlayerAnim_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerAnim)
 
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_INCLASS \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_INCLASS \
 private: \
 	static void StaticRegisterNativesUPlayerAnim(); \
 	friend struct Z_Construct_UClass_UPlayerAnim_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UPlayerAnim)
 
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_STANDARD_CONSTRUCTORS \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerAnim(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPlayerAnim) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_ENHANCED_CONSTRUCTORS \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UPlayerAnim(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -60,28 +60,32 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UPlayerAnim); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UPlayerAnim)
 
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_PRIVATE_PROPERTY_OFFSET
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_12_PROLOG
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_GENERATED_BODY_LEGACY \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__Speed() { return STRUCT_OFFSET(UPlayerAnim, Speed); } \
+	FORCEINLINE static uint32 __PPO__Direction() { return STRUCT_OFFSET(UPlayerAnim, Direction); }
+
+
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_7_PROLOG
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_PRIVATE_PROPERTY_OFFSET \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_SPARSE_DATA \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_RPC_WRAPPERS \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_INCLASS \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_STANDARD_CONSTRUCTORS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_PRIVATE_PROPERTY_OFFSET \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_SPARSE_DATA \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_RPC_WRAPPERS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_INCLASS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_GENERATED_BODY \
+#define UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_PRIVATE_PROPERTY_OFFSET \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_SPARSE_DATA \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_INCLASS_NO_PURE_DECLS \
-	UE_Project_Source_UE_Project_Player_PlayerAnim_h_15_ENHANCED_CONSTRUCTORS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_PRIVATE_PROPERTY_OFFSET \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_SPARSE_DATA \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_INCLASS_NO_PURE_DECLS \
+	UE_Project_Source_UE_Project_Player_PlayerAnim_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

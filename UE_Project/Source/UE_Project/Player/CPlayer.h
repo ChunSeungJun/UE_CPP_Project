@@ -15,11 +15,12 @@ public:
 	// Sets default values for this character's properties
 	ACPlayer();
 	
+public :
 
-private :
-	UPROPERTY(VisibleDefaultsOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="SpringArm")
 		class USpringArmComponent* SpringArm;
 	
+private :
 	UPROPERTY(VisibleDefaultsOnly)
 		class UCameraComponent* Camera;
 
@@ -36,8 +37,6 @@ private :
 	void OnMoveForward(float axis);
 	void OnMoveRight(float axis);
 
-	void OnHorizontalLook(float axis);
-	void OnVerticalLook(float axis);
 
 	void Run();
 	void Walk();

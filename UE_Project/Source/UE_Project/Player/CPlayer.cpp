@@ -28,7 +28,7 @@ ACPlayer::ACPlayer()
 	GetMesh()->SetRelativeLocation(FVector(0, 0, -90));
 	GetMesh()->SetRelativeRotation(FRotator(0, -90, 0));
 
-	ConstructorHelpers::FClassFinder<UAnimInstance> anim(L"");
+	ConstructorHelpers::FClassFinder<UAnimInstance> anim(L"AnimBlueprint'/Game/BluePrint/Player/ABP_Player.ABP_Player_C'");;
 	if (anim.Succeeded()) GetMesh()->SetAnimClass(anim.Class);
 
 	SpringArm->SetRelativeLocation(FVector(0, 0, 60));
@@ -52,8 +52,6 @@ void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &ACPlayer::OnMoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &ACPlayer::OnMoveRight);
-	PlayerInputComponent->BindAxis("HorizontalLook", this, &ACPlayer::OnHorizontalLook);
-	PlayerInputComponent->BindAxis("VerticalLook", this, &ACPlayer::OnVerticalLook);
 
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Pressed, this, &ACPlayer::Run);
 	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Released, this, &ACPlayer::Walk);
@@ -79,17 +77,7 @@ void ACPlayer::OnMoveRight(float axis)
 	AddMovementInput(direction, axis);
 }
 
-void ACPlayer::OnHorizontalLook(float axis)
-{
-	
-	AddControllerYawInput(axis);
 
-}
-
-void ACPlayer::OnVerticalLook(float axis)
-{
-	AddControllerPitchInput(axis);
-}
 
 void ACPlayer::Run()
 {
