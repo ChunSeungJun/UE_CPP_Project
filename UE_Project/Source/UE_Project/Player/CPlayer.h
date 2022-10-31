@@ -14,31 +14,23 @@ class UE_PROJECT_API ACPlayer : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ACPlayer();
-	
-public :
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="SpringArm")
-		class USpringArmComponent* SpringArm;
-	
-private :
-	UPROPERTY(VisibleDefaultsOnly)
-		class UCameraComponent* Camera;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-private :
-	void OnMoveForward(float axis);
-	void OnMoveRight(float axis);
+private:
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class UCameraComponent* CameraComponent;
 
-	void Run();
-	void Walk();
-
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
+		class USpringArmComponent* SpringArmComponent;
 };

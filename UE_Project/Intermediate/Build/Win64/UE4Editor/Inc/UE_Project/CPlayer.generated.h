@@ -59,7 +59,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ACPlayer); \
 
 
 #define UE_Project_Source_UE_Project_Player_CPlayer_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Camera() { return STRUCT_OFFSET(ACPlayer, Camera); }
+	FORCEINLINE static uint32 __PPO__CameraComponent() { return STRUCT_OFFSET(ACPlayer, CameraComponent); } \
+	FORCEINLINE static uint32 __PPO__SpringArmComponent() { return STRUCT_OFFSET(ACPlayer, SpringArmComponent); }
 
 
 #define UE_Project_Source_UE_Project_Player_CPlayer_h_9_PROLOG

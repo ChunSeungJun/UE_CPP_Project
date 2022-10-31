@@ -1,12 +1,11 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\user\Desktop\UE_CPP_Project).
   Building UE_ProjectEditor...
   Using Visual Studio 2019 14.29.30146 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 12 processes...
-    [1/4] PlayerAnim.cpp
-    [2/4] UE4Editor-UE_Project.lib
+  Building 3 actions with 12 processes...
+    [1/3] UE4Editor-UE_Project.lib
        C:\Users\user\Desktop\UE_CPP_Project\UE_Project\Intermediate\Build\Win64\UE4Editor\Development\UE_Project\UE4Editor-UE_Project.lib 라이브러리 및 C:\Users\user\Desktop\UE_CPP_Project\UE_Project\Intermediate\Build\Win64\UE4Editor\Development\UE_Project\UE4Editor-UE_Project.exp 개체를 생성하고 있습니다.
-    [3/4] UE4Editor-UE_Project.dll
+    [2/3] UE4Editor-UE_Project.dll
        C:\Users\user\Desktop\UE_CPP_Project\UE_Project\Intermediate\Build\Win64\UE4Editor\Development\UE_Project\UE4Editor-UE_Project.suppressed.lib 라이브러리 및 C:\Users\user\Desktop\UE_CPP_Project\UE_Project\Intermediate\Build\Win64\UE4Editor\Development\UE_Project\UE4Editor-UE_Project.suppressed.exp 개체를 생성하고 있습니다.
-    [4/4] UE_ProjectEditor.target
-  Total time in Parallel executor: 1.50 seconds
-  Total execution time: 1.99 seconds
+    [3/3] UE_ProjectEditor.target
+  Total time in Parallel executor: 1.06 seconds
+  Total execution time: 1.58 seconds

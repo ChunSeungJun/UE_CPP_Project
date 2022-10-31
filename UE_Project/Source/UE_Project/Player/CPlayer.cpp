@@ -1,91 +1,59 @@
 #include "CPlayer.h"
 
-#include "GameFramework/SpringArmComponent.h"
-#include "GameFramework/CharacterMovementComponent.h"
-
-#include "Components/SkeletalMeshComponent.h"
 #include "Components/CapsuleComponent.h"
-#include "Components/InputComponent.h"
-#include "Components/ArrowComponent.h"
-
 #include "Camera/CameraComponent.h"
+#include <Engine/Classes/GameFramework/CharacterMovementComponent.h>
+#include <Engine/Classes/GameFramework/SpringArmComponent.h>
 
 
 ACPlayer::ACPlayer()
 {
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bStartWithTickEnabled = true;
 
-	SpringArm = CreateDefaultSubobject<USpringArmComponent>("SpringArm");
-	SpringArm->SetupAttachment(GetCapsuleComponent());
-	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
-	Camera->SetupAttachment(SpringArm);
+	GetCapsuleComponent()->InitCapsuleSize(42.0f, 96.0f);
 
+	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
+	bUseControllerRotationRoll = false;
+
 	GetCharacterMovement()->bOrientRotationToMovement = true;
-	GetCharacterMovement()->MaxWalkSpeed = 400;
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 640.0f, 0.0f);
+	GetCharacterMovement()->bConstrainToPlane = true;
+	GetCharacterMovement()->bSnapToPlaneAtStart = true;
 
-	ConstructorHelpers::FObjectFinder<USkeletalMesh> mesh(L"SkeletalMesh'/Game/Character/Mesh/SK_Mannequin.SK_Mannequin'");
-	if (mesh.Succeeded()) GetMesh()->SetSkeletalMesh(mesh.Object);
-	GetMesh()->SetRelativeLocation(FVector(0, 0, -90));
-	GetMesh()->SetRelativeRotation(FRotator(0, -90, 0));
+	SpringArmComponent = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraSpringArm"));
+	SpringArmComponent->SetupAttachment(RootComponent);
+	SpringArmComponent->SetUsingAbsoluteRotation(true);
+	SpringArmComponent->TargetArmLength = 800.0f;
+	SpringArmComponent->SetRelativeRotation(FRotator(-60.0f, 45.0f, 0.0f));
+	SpringArmComponent->bDoCollisionTest = false;
 
-	ConstructorHelpers::FClassFinder<UAnimInstance> anim(L"AnimBlueprint'/Game/BluePrint/Player/ABP_Player.ABP_Player_C'");;
-	if (anim.Succeeded()) GetMesh()->SetAnimClass(anim.Class);
-
-	SpringArm->SetRelativeLocation(FVector(0, 0, 60));
-	SpringArm->TargetArmLength = 200;
-	SpringArm->bUsePawnControlRotation = true;
-	SpringArm->SocketOffset = FVector(0, 60, 0);
-
-	AutoPossessPlayer = EAutoReceiveInput::Player0;
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
+	CameraComponent->SetupAttachment(SpringArmComponent, USpringArmComponent::SocketName);
+	CameraComponent->bUsePawnControlRotation = false;
 }
 
+// Called when the game starts or when spawned
 void ACPlayer::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
+// Called every frame
+void ACPlayer::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
 
+}
+
+// Called to bind functionality to input
 void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &ACPlayer::OnMoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &ACPlayer::OnMoveRight);
-
-	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Pressed, this, &ACPlayer::Run);
-	PlayerInputComponent->BindAction("Run", EInputEvent::IE_Released, this, &ACPlayer::Walk);
-
 }
 
-void ACPlayer::OnMoveForward(float axis)
-{
-	FRotator rotator = FRotator(0, GetControlRotation().Yaw, 0);
-	// Controller 의 yaw 회전값을 저장합니다.
-	FVector direction = FQuat(rotator).GetForwardVector().GetSafeNormal();
-	// Controller 기준의 앞 방향을 1로 정규화된 값으로 저장합니다.
-
-	AddMovementInput(direction, axis);
-}
-
-void ACPlayer::OnMoveRight(float axis)
-{
-	FRotator rotator = FRotator(0, GetControlRotation().Yaw, 0);
-	FVector direction = FQuat(rotator).GetRightVector().GetSafeNormal();
-	// Controller 기준의 오른쪽 방향을 1로 정규화된 값으로 저장합니다.
-
-	AddMovementInput(direction, axis);
-}
-
-
-
-void ACPlayer::Run()
-{
-	GetCharacterMovement()->MaxWalkSpeed = 600;
-}
-
-void ACPlayer::Walk()
-{
-	GetCharacterMovement()->MaxWalkSpeed = 400;
-}
 

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\UE_Project.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{F31777B5-4F33-42C5-8B04-1E1F6094F3C6}</UniqueIdentifier>
+      <UniqueIdentifier>{FB32BC39-20B9-49D5-9DDC-044D7A6EEED1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\UE_Project.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{F24DA9C5-8DF7-42A6-AA0E-95FF32EA90A9}</UniqueIdentifier>
+      <UniqueIdentifier>{2397BCBF-42EC-468D-9071-811DF6C59EA4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\UE_Project">
-      <UniqueIdentifier>{D1A3A12F-DDF6-4C2D-9E05-F9F0DE09D076}</UniqueIdentifier>
+      <UniqueIdentifier>{CE623A78-B0A6-49A6-9C14-5B224DF1CDAC}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\UE_Project\C_ClickMove.cpp">
+      <Filter>Source\UE_Project</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\UE_Project\C_ClickMove.h">
+      <Filter>Source\UE_Project</Filter>
+    </ClInclude>
     <None Include="..\..\Source\UE_Project\UE_Project.Build.cs">
       <Filter>Source\UE_Project</Filter>
     </None>
@@ -45,7 +51,7 @@
       <Filter>Source\UE_Project</Filter>
     </ClInclude>
     <Filter Include="Source\UE_Project\Player">
-      <UniqueIdentifier>{8AEB3E3E-A3B7-4E13-A6F8-EF6C7F5B641C}</UniqueIdentifier>
+      <UniqueIdentifier>{1007EC67-D329-4392-AB95-1D9B3C1D0115}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\UE_Project\Player\CPlayer.cpp">
       <Filter>Source\UE_Project\Player</Filter>
