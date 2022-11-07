@@ -33,4 +33,13 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 		class USpringArmComponent* SpringArmComponent;
+
+private :
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Skill, meta = (AllowPrivateAccess = "true"))
+		class USkillComponent* Skill;
+
+private :
+	void OnSkill();
+
 };

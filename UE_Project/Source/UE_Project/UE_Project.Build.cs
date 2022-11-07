@@ -8,7 +8,7 @@ public class UE_Project : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem", "AIModule" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem", "AIModule" , "Niagara", "GamePlayTasks", "UMG" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

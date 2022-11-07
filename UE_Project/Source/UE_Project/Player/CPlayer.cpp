@@ -4,6 +4,8 @@
 #include "Camera/CameraComponent.h"
 #include <Engine/Classes/GameFramework/CharacterMovementComponent.h>
 #include <Engine/Classes/GameFramework/SpringArmComponent.h>
+#include <Skill/C_Skill.h>
+#include <Skill/C_SkillComponent.h>
 
 
 ACPlayer::ACPlayer()
@@ -53,6 +55,13 @@ void ACPlayer::Tick(float DeltaTime)
 void ACPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Skill", EInputEvent::IE_Pressed, this, &ACPlayer::OnSkill);
+
+}
+
+void ACPlayer::OnSkill()
+{
 
 }
 
